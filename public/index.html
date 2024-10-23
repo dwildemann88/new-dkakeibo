@@ -36,4 +36,25 @@
         <div class="empresa"><h4>Eleven Corporation, 2024</h4></div>
     </footer>
 </body>
+<script>
+    document.querySelector("button[type='submit']").addEventListener("click", function(e) {
+      e.preventDefault(); // Previne o reload da página
+      const nome = document.getElementById("nome").value;
+      const objetivo = document.getElementById("objetivo").value;
+      const salario = parseFloat(document.getElementById("salario").value);
+  
+      if (nome && objetivo && salario) {
+        // Armazenar os dados no localStorage
+        localStorage.setItem("dkakeiboNome", nome);
+        localStorage.setItem("dkakeiboObjetivo", objetivo);
+        localStorage.setItem("dkakeiboSalario", salario);
+  
+        // Redirecionar para a página do calendário
+        window.location.href = "calendar.html";
+      } else {
+        alert("Por favor, preencha todos os campos.");
+      }
+    });
+  </script>
+  
 </html>

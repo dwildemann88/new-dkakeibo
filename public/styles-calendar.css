@@ -4,6 +4,7 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: "Jua", sans-serif;
+    overflow:initial;
 }
 body{
     height: 100vh;
@@ -90,3 +91,135 @@ main{
         transform: scale(1.12);
     }
 }
+
+/*  */
+
+
+.janela-mes, .progresso-container {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .barra-progresso {
+    height: 20px;
+    width: 100%;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .progresso {
+    height: 100%;
+    background-color: rgb(238, 57, 57);
+    border-radius: 10px;
+  }
+  
+
+
+  /*  */
+
+  .blurred {
+    filter: blur(5px);
+    pointer-events: none;
+  }
+
+  /* Estilo para a janela de mês */
+  .janela-mes {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    border-radius: 10px;
+  }
+
+  /* Estilo para o fundo desfoque */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  /* Estilo para os botões */
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  button[onclick*="adicionarGasto"][onclick*="true"] {
+    background-color: green;
+    color: white;
+  }
+
+  button[onclick*="adicionarGasto"][onclick*="false"] {
+    background-color: red;
+    color: white;
+  }
+
+  button[onclick*="fecharJanela"] {
+    background-color: gray;
+    color: white;
+  }
+
+  button[onclick*="fecharProgresso"] {
+    background-color: gray;
+    color: white;
+  }
+
+  /* Estilo para a lista de itens */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    padding: 10px;
+    margin-bottom: 5px;
+    color: white;
+    border-radius: 5px;
+  }
+
+  /* Estilo para o progresso */
+  .progresso-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    border-radius: 10px;
+    width: 50%;
+  }
+
+  .barra-progresso {
+    background-color: lightgray;
+    border-radius: 5px;
+    height: 25px;
+    margin-top: 10px;
+  }
+
+  .progresso {
+    height: 100%;
+    background-color: green;
+    border-radius: 5px;
+  }
